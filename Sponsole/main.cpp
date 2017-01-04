@@ -16,6 +16,7 @@
 #include <vector>
 #include "HTTP_Socket.hpp"
 #include "CurlClass.hpp"
+#include "Printer.hpp"
 
 #define TRACK 0
 #define ALBUM 1
@@ -145,10 +146,10 @@ void parse_command(vector<string> command_line){
             play_song(song);
         }
         return;
-    }else if(!command_line[0].compare("next")){
+    }else if((!command_line[0].compare("next")) || (!command_line[0].compare("n"))){
         string play_next = "osascript -e 'tell app \"Spotify\" to next track'";
         system(play_next.c_str());
-    }else if(!command_line[0].compare("prev")){
+    }else if((!command_line[0].compare("prev"))|| (!command_line[0].compare("p"))){
         string play_prev = "osascript -e 'tell application \"Spotify\" to set player position to 0 previous track'";
         system(play_prev.c_str());
     }else if (!command_line[0].compare("up")){
@@ -263,6 +264,9 @@ void print_usage(){
     cout << "play <Artist> <Song>\t //play Song by Artist"<<endl;
     cout << "play <Album>\t //play Album, first query given by spotify will play"<<endl;
     cout << "play <Artist> <Album>\t //play Album by Artist"<<endl;
+    cout << "\"vol up/down\" or just \"up/down\" will turn the volume up and down respectively." << endl;
+    cout << "vol <0-100> will set Spotify's volume to given level (only works for Spotify in Desktop Mode)."<< endl;
+    cout << "next/prev will play the next or previous tracks in the Spotify queue."<< endl;
 }
 
 void initiate_curl(){
@@ -274,15 +278,16 @@ void initiate_curl(){
 }
 
 void print_intro(){
-    cout <<"Welcome to Sponsole, for usage type help.\n"<<
+    cout <<"Welcome to Sponsole\n"<<
     "Do you want to login using your Spotify login? (y/n)" << endl;
     
 }
 
 int main(int argc, const char * argv[]) {
     //sys init
-    current_volume = get_volume();
-    cout << current_volume << endl;
+    Printer printer;
+    //current_volume = get_volume();
+    //cout << current_volume << endl;
     print_intro();
     string login;
     getline(cin,login);
@@ -292,9 +297,15 @@ int main(int argc, const char * argv[]) {
         getline(cin,user_name);
         cout <<"Enter Spotify password."<<endl;
         getline(cin,password);
+    }else if((!login.compare("n")) || (!login.compare("no"))){
+       // cout << "will not login" << endl;
+    }else{
+       // cout << "did not answer correctly will not login" << endl;
     }
     //main loop
-    
+   // if(system("CLS"))
+        system("clear");
+    printer.print_intro();
     while(1){
         cout << "Sponsole > ";
         vector<string> command_line;

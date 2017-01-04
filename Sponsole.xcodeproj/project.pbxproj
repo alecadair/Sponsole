@@ -12,6 +12,7 @@
 		273173751E032B960042A89F /* MusicPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 273173731E032B960042A89F /* MusicPlayer.cpp */; };
 		273173771E033DC10042A89F /* libcurl.4.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 273173761E033DC10042A89F /* libcurl.4.tbd */; };
 		2731737A1E0342BD0042A89F /* CurlClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 273173781E0342BD0042A89F /* CurlClass.cpp */; };
+		27A811FB1E1C5EC3000BCF0A /* Printer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27A811F91E1C5EC2000BCF0A /* Printer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,8 @@
 		273173761E033DC10042A89F /* libcurl.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.4.tbd; path = usr/lib/libcurl.4.tbd; sourceTree = SDKROOT; };
 		273173781E0342BD0042A89F /* CurlClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurlClass.cpp; sourceTree = "<group>"; };
 		273173791E0342BD0042A89F /* CurlClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CurlClass.hpp; sourceTree = "<group>"; };
+		27A811F91E1C5EC2000BCF0A /* Printer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Printer.cpp; sourceTree = "<group>"; };
+		27A811FA1E1C5EC2000BCF0A /* Printer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Printer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				273173741E032B960042A89F /* MusicPlayer.hpp */,
 				273173781E0342BD0042A89F /* CurlClass.cpp */,
 				273173791E0342BD0042A89F /* CurlClass.hpp */,
+				27A811F91E1C5EC2000BCF0A /* Printer.cpp */,
+				27A811FA1E1C5EC2000BCF0A /* Printer.hpp */,
 			);
 			path = Sponsole;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A811FB1E1C5EC3000BCF0A /* Printer.cpp in Sources */,
 				273173721E0322CD0042A89F /* HTTP_Socket.cpp in Sources */,
 				273173751E032B960042A89F /* MusicPlayer.cpp in Sources */,
 				2731737A1E0342BD0042A89F /* CurlClass.cpp in Sources */,
@@ -259,6 +265,7 @@
 				2731736E1E031EE20042A89F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
