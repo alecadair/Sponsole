@@ -22,7 +22,8 @@
 #define ALBUM 1
 #define ARTIST 2
 #define PLAYLIST 3
-#define PAUSED 0
+#define PAUSED 1
+#define PLAYING 0
 
 using namespace std;
 
@@ -38,6 +39,8 @@ static void initiate_curl();
 static string create_search_url(string,int);
 static int get_volume();
 static void set_volume(int);
+static bool is_paused();
+static void display_status();
 
 //global variables
 static CURL* my_handle;
@@ -46,6 +49,24 @@ static int current_volume;
 static bool paused;
 int test = 0;
 
+static bool is_paused(){
+    FILE* fd;
+    string command = "osascript -e 'tell application \"Spotify\" to player state as string'";
+    char buff[512];
+    fd = popen(command.c_str(),"r");
+    if(fd){
+        while(fgets(buff,sizeof(buff),fd) != NULL){
+            string result(buff);
+            if(!result.compare("paused\n"))
+                return true;
+            else if (!result.compare("playing\n"))
+               return false;
+            break;
+        }
+        return 0;
+    }else{ cout << "could not create file descriptor"<<endl;
+        return 0;}
+}
 static void set_volume(int vol){
     FILE* fd;
     string command = "osascript -e 'tell application \"Spotify\" to set sound volume to ";
@@ -69,8 +90,10 @@ static int get_volume(){
       //  int vol = 0;
         while(fgets(buff,sizeof(buff),fp) != NULL){
             vol = atoi(buff);
+            pclose(fp);
+            break;
         }
-        pclose(fp);
+      //  pclose(fp);
     }
     return vol;
 }
@@ -112,6 +135,14 @@ void parse_command(vector<string> command_line){
         return;
     }
     if(!command_line[0].compare("play")){
+        if(command_line.size() == 1){
+            if(paused){
+                string play ="osascript -e 'tell application \"Spotify\" to playpause'";
+                system(play.c_str());
+                paused = PLAYING;
+            }
+            return;
+        }
         if(!command_line[1].compare("artist")){
             string artist = "";
             for(int i = 2; i < command_line.size(); i++){
@@ -149,13 +180,31 @@ void parse_command(vector<string> command_line){
     }else if((!command_line[0].compare("next")) || (!command_line[0].compare("n"))){
         string play_next = "osascript -e 'tell app \"Spotify\" to next track'";
         system(play_next.c_str());
-    }else if((!command_line[0].compare("prev"))|| (!command_line[0].compare("p"))){
+    }else if((!command_line[0].compare("prev"))/*|| (!command_line[0].compare("p"))*/){
         string play_prev = "osascript -e 'tell application \"Spotify\" to set player position to 0 previous track'";
         system(play_prev.c_str());
     }else if (!command_line[0].compare("up")){
         vol_up();
     }else if(!command_line[0].compare("down")){
         vol_down();
+    }else if(!command_line[0].compare("pause")){
+        if(!paused){
+            string pause = "osascript -e 'tell application \"Spotify\" to playpause'";
+            system(pause.c_str());
+            paused = PAUSED;
+        }
+    }else if(!command_line[0].compare("p")){
+        if(paused == PAUSED)
+            paused = PLAYING;
+        else
+            paused = PAUSED;
+        string pauseplay = "osascript -e 'tell application \"Spotify\" to playpause'";
+        system(pauseplay.c_str());
+    }else if((!command_line[0].compare("stats")) || (!command_line[0].compare("stat"))
+                                || (!command_line[0].compare("status"))){
+        Printer p;
+        p.print_status();
+        return;
     }else if(!command_line[0].compare("vol")){
         //get_volume();
         if(command_line.size() > 1){
@@ -259,14 +308,16 @@ static void play_artist(string artist){
 }
 void print_usage(){
     cout << "Sponsole Usage"<< endl;
-    cout << "play <Artist>\t //play artist starting with number one hit"<<endl;
-    cout << "play <Song>\t //play Song, first query given by spotify will play"<<endl;;
-    cout << "play <Artist> <Song>\t //play Song by Artist"<<endl;
-    cout << "play <Album>\t //play Album, first query given by spotify will play"<<endl;
-    cout << "play <Artist> <Album>\t //play Album by Artist"<<endl;
-    cout << "\"vol up/down\" or just \"up/down\" will turn the volume up and down respectively." << endl;
-    cout << "vol <0-100> will set Spotify's volume to given level (only works for Spotify in Desktop Mode)."<< endl;
-    cout << "next/prev will play the next or previous tracks in the Spotify queue."<< endl;
+    cout << "play <Artist>\t\t//play artist starting with number one hit"<<endl;
+    cout << "play <Song>\t//play Song, first query given by spotify will play"<<endl;;
+    cout << "play <Artist> <Song>\t\t//play Song by Artist"<<endl;
+    cout << "play <Album>\t\t//play Album, first query given by spotify will play"<<endl;
+    cout << "play <Artist> <Album>\t//play Album by Artist"<<endl;
+    cout << "play\t\t\\play current song if paused" << endl;
+    cout << "pause\t\t//pause current song if playing" << endl;
+    cout << "vol <up/down> or up/down\t\tturns the volume up and down respectively." << endl;
+    cout << "vol <0-100>\t\tsets Spotify's volume to given level (only works for Spotify in Desktop Mode)."<< endl;
+    cout << "next/prev\t\tplays the next or previous tracks in the Spotify queue."<< endl;
 }
 
 void initiate_curl(){
@@ -283,8 +334,24 @@ void print_intro(){
     
 }
 
+static void display_status(){
+    
+}
+
 int main(int argc, const char * argv[]) {
     //sys init
+    paused = is_paused();
+    current_volume = get_volume();
+    
+    if(argc > 1){
+        vector<string> argument;
+        for(int i =1; i < argc; i ++){
+            string toke = argv[i];
+            argument.push_back(toke);
+        }
+        parse_command(argument);
+        return 0;
+    }
     Printer printer;
     //current_volume = get_volume();
     //cout << current_volume << endl;

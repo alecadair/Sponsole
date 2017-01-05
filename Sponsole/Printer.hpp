@@ -16,5 +16,6 @@
 class Printer{
 public:
     void print_intro();
+    void print_status();
 };
 #endif /* Printer_hpp */

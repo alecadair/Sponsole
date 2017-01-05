@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "parse_command(vector&lt;string&gt; command_line)"
             landmarkType = "7">
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "parse_command(vector&lt;string&gt; command_line)"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "play_artist(string artist)"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "play_artist(string artist)"
             landmarkType = "7">
          </BreakpointContent>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "play_song(string song)"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "vol_up()"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "create_search_url(string query, int type)"
             landmarkType = "7">
          </BreakpointContent>
@@ -184,59 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "parse_command(vector&lt;string&gt; command_line)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "parse_command(std::__1::vector&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::allocator&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; &gt; &gt;)"
-                  moduleName = "Sponsole"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alecadair/Documents/SponsoleApp/Sponsole/Sponsole/main.cpp"
-                  timestampString = "504826490.500106"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "154"
-                  endingLineNumber = "154"
-                  offsetFromSymbolStart = "4987">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "parse_command(std::__1::vector&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::allocator&lt;std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; &gt; &gt;)"
-                  moduleName = "Sponsole"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alecadair/Documents/SponsoleApp/Sponsole/Sponsole/main.cpp"
-                  timestampString = "504826490.500312"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "154"
-                  endingLineNumber = "154"
-                  offsetFromSymbolStart = "4992">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sponsole/main.cpp"
-            timestampString = "505176286.721242"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "parse_command(vector&lt;string&gt; command_line)"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,11 +200,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505177964.429781"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "parse_command(vector&lt;string&gt; command_line)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sponsole/main.cpp"
+            timestampString = "505335342.447904"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "376"
+            endingLineNumber = "376"
             landmarkName = "main(int argc, const char * argv[])"
             landmarkType = "7">
          </BreakpointContent>
@@ -264,12 +232,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"
-            timestampString = "505177964.429781"
+            timestampString = "505335342.447904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
             landmarkName = "main(int argc, const char * argv[])"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sponsole/main.cpp"
+            timestampString = "505335342.447904"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "main(int argc, const char * argv[])"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sponsole/main.cpp"
+            timestampString = "505335342.447904"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "is_paused()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
