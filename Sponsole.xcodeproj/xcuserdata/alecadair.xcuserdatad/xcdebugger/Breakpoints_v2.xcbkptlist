@@ -186,7 +186,7 @@
                   moduleName = "Sponsole"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alecadair/Documents/SponsoleApp/Sponsole/Sponsole/main.cpp"
-                  timestampString = "505721780.568036"
+                  timestampString = "505722452.20674"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "185"
@@ -201,7 +201,7 @@
                   moduleName = "Sponsole"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alecadair/Documents/SponsoleApp/Sponsole/Sponsole/main.cpp"
-                  timestampString = "505721780.569226"
+                  timestampString = "505722452.209892"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "185"
@@ -231,38 +231,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sponsole/main.cpp"
-            timestampString = "505721778.839195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375"
-            landmarkName = "main(int argc, const char * argv[])"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sponsole/main.cpp"
-            timestampString = "505721778.839195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
-            landmarkName = "main(int argc, const char * argv[])"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sponsole/main.cpp"

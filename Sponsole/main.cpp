@@ -182,6 +182,10 @@ void parse_command(vector<string> command_line){
     }else if((!command_line[0].compare("prev"))/*|| (!command_line[0].compare("p"))*/){
         string play_prev = "osascript -e 'tell application \"Spotify\" to set player position to 0 previous track'";
         system(play_prev.c_str());
+    }else if(!command_line[0].compare("q")
+                            || !command_line[0].compare("quit")){
+        exit(0);
+        
     }else if (!command_line[0].compare("up")){
         vol_up();
     }else if(!command_line[0].compare("down")){
@@ -385,6 +389,7 @@ int main(int argc, const char * argv[]) {
         if(command_line.size() > 0){
             parse_command(command_line);
         }
+       // }
     }
     return 0;
 }
