@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include <string>
-#include </usr/local/include/node/node.h>
 #include <curl/curl.h>
 #include <sstream>
 #include <regex>
